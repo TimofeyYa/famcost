@@ -1,0 +1,401 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root{
+    --color-acent: #BF2431;
+    --color-green: #9bba8a;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.mainfirst{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accent{
+    color: var(--color-acent);
+}
+.mainfirst video{
+    position: absolute;
+    top:0;
+    height: 120%;
+    z-index: 1;
+    transition: 0.4s;
+}
+.mainfirst__content{
+    position: relative;
+    z-index: 2;
+    background: white;
+    max-width: 730px;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    transition: 0.7s;
+}
+.mainfirst__content h1{
+    font-size: 45px;
+    font-weight: 500;
+    text-align: center;
+}
+.mainfirst a{
+     padding: 13px 44px;
+     background: #9bba8a;
+     color: white;
+     margin-top: 20px;
+}
+.animateEnd video{
+   filter: brightness(0.8);
+}
+.mainfirst .mainfirst__content{
+    opacity: 0;
+    transform: translate(0,200px);
+}
+.animateEnd .mainfirst__content{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+/* signBody */
+
+.signBody{
+    background:#9bba8a;
+    
+}
+.signPhoto{
+    height: 100vh;
+    width: 55vw;
+    background: url('../source/sign/ergonofis-oLThw11c8kg-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.signBody__wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+    height: 100vh;
+
+}
+.sign__content{
+    width: 45vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    position: relative;
+}
+.sign__content h2{
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    top: 20px;
+}
+.sign__formWrap{
+    margin-right: 80px;
+    background: white;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 100%;
+    padding: 60px 20px;
+    height: min-content;
+}
+.sign__formWrap h1{
+    font-size: 27px;
+}
+.form__sign{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    grid-gap: 15px;
+}
+.sign__formWrap input{
+    max-width: 350px;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid var(--color-green);
+}
+.sign__formWrap button{
+    background:var(--color-acent);
+    border:none;
+    width: 100%;
+    height: 43px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.sign__formWrap button:hover{
+    transform: translate(0,-3px);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.sign__formWrap h4{
+    max-width: 215px;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.sign__formWrap h4:hover{
+    text-decoration: underline;
+}
+.form__signUp{
+    display: none ;
+}
+.sign__btnIn{
+    display: none;
+}
+.sign__formWrap h3{
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* profil */
+
+.profil__body{
+    background:var(--color-green);
+}
+.profil__contentWrap{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.profil__content{
+    background:white;
+    border-radius: 10px;
+    max-width: 1100px;
+    width: 100%;
+    height: 80vh;
+    padding: 25px;
+}
+.profil__topInfo h1{
+    font-size: 40px;
+}
+#exit__btn {
+    color:var(--color-acent);
+    font-size: 20px;
+    cursor: pointer;
+}
+.profil__topInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.profil__topAccaunts{
+    margin-top: 20px;
+    width: 100%;
+    
+}
+.profil__topBlock{
+    display: grid;
+    grid-template-columns: 4fr 2fr 1fr;
+    padding-left: 20px;
+}
+.profil__topAccaunts{
+    border-left: 3px solid var(--color-green);
+    
+}
+.profil__topAccauntsPanel{
+    background:var(--color-green);
+    max-width: 300px;
+    width: 100%;
+    color: white;
+    height: 30px;
+    padding: 5px 9px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.profil__topAccauntsPanel h2{
+    font-weight: 500;
+    font-size: 19px;
+}
+.profil__topAccauntsAdd{
+    color: var(--color-acent);
+    background:white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor:pointer;
+}
+.profil__topBlocks{
+    padding-top: 10px;
+    height: 210px;
+    overflow-y: scroll;
+}
+.profil__topBlock{
+    border-bottom: 2px solid var(--color-green);
+    padding-top: 7px;
+    padding-bottom: 4px;
+    padding-right: 20px;
+}
+
+.profil__bottom{
+    padding-top: 20px;
+}
+.profil__stonks{
+    display: grid;
+    grid-template-columns: 3fr 4fr 4fr;
+    grid-gap: 15px;
+
+}
+.profil__sec{
+    border: 2px solid var(--color-green);
+    border-radius: 5px;
+    height: 100%;
+}
+.profil__stonksTitle{
+    background:var(--color-green);
+    color:white;
+    padding: 5px 10px;
+}
+.profil__stonksList{
+    padding-top: 10px;
+    overflow-y: scroll;
+    height: 220px;
+}
+.profil__stonksBlock{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+    padding: 7px 10px;
+    grid-gap: 10px;
+    border-bottom: 1px solid var(--color-green);
+}
+.profil__stonksAdd{
+    padding-right: 30px;
+}
+.profil__stonksAdd form{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+}
+.profil__stonksAdd input{
+    width: 100%;
+    height: 28px;
+    border: none;
+    border-bottom: 2px solid var(--color-green);
+    padding: 3px 5px;
+}
+.profil__stonksAdd select{
+    height: 25px;
+    border:none;
+    border-bottom: 2px solid var(--color-green);
+}
+.select__green{
+    color:var(--color-green);
+  
+}
+.select__red{
+    color:var(--color-acent);
+  
+}
+.profil__stonksAdd button{
+    height: 33px;
+    border:2px solid var(--color-green);
+    background:transparent;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.popup{
+    display: flex;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background:rgba(0, 0, 0, 0.3);
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.popup__content{
+    background:white;
+    padding: 25px;
+    border-radius: 15px;
+}
+.popup__content h3{
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.popup__contentForm form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.popup__contentForm input{
+    width: 100%;
+    height: 28px;
+    border: none;
+    border-bottom: 2px solid var(--color-green);
+    padding: 3px 5px;
+}
+.popup__contentForm button{
+    height: 33px;
+    border:2px solid var(--color-green);
+    background:transparent;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 5px;
+    width: 100%;
+}
+.selectedUser{
+    width: 7px;
+    height: 7px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background:var(--color-acent);
+}
+.profil__topBlockName h3{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.profil__topBlockDelite{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.profil__stonksBlockDelite{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.profil__topBlockDelite:hover{
+    color: var(--color-acent);
+}
+.profil__stonksBlockDelite:hover{
+    color: var(--color-acent);
+}
